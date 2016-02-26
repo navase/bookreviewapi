@@ -1,0 +1,5 @@
+== README
+
+This is a JSON API for BookReview (personal project).
+Created with Ruby on Rails 4.
+Postgresql database.
