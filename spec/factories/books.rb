@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :review do
-    name "MyString"
-    description "MyString"
+  factory :book do
+    title "MyString"
+    author "MyString"
   end
 end

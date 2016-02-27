@@ -14,9 +14,9 @@ class BooksController < ApplicationController
 
   def create
     if book = Book.create(book_params)
-    render json: {
-      book: book
-    }
+      render json: {
+        book: book
+      }
     else
       render json: {
         message: "Something went wrong with adding your book. Please try again!",
