@@ -61,6 +61,7 @@ end
 
 # Bootstrap for styling, which is actually not neccesary for an API, but was in my system
 gem 'bootstrap-sass', '~> 3.3.6'
-
 # Puma web server
 gem 'puma'
+# Cors config for making AJAX calls
+gem 'rack-cors', require: 'rack/cors'
