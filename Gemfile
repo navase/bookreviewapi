@@ -35,19 +35,32 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Rspec testing
   gem 'rspec-rails'
+  # Use ShouldaMatchers to write shorter tests
   gem 'shoulda-matchers'
+  # FactoryGirl makes factories (instead of fixtures) for testing
   gem 'factory_girl_rails'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Guard runs RSpec immediately when files are edited
   gem 'guard-rspec'
+  # Spring runs Guard faster
   gem 'spring-commands-rspec'
 end
 
+group :production do
+  # Necessary for deploying to Heroku
+  gem 'rails_12factor'
+end
+
+# Bootstrap for styling, which is actually not neccesary for an API, but was in my system
 gem 'bootstrap-sass', '~> 3.3.6'
+
+# Puma web server
+gem 'puma'
