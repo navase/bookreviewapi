@@ -7,7 +7,13 @@ class BooksController < ApplicationController
 
   def show
     book = Book.find(params[:id])
-    average_rating = book.reviews.average(:rating)
+
+    if (book.reviews.average(:rating) === nil)
+      average_rating = 0
+    else
+      average_rating = book.reviews.average(:rating).round
+    end
+
     render json: {
       book: book,
       average_rating: average_rating
