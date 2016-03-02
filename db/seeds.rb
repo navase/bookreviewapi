@@ -11,6 +11,7 @@ Book.destroy_all
 
 wind = Book.create({
   title: "The Name of the Wind", author: "Patrick Rothfuss", publication_date: "2007-03-27",
+  image: "http://vignette2.wikia.nocookie.net/nameofthewind/images/9/9e/The_Name_of_the_Wind_(UK)_cover.jpg",
   summary: "My name is Kvothe.
 
   I have stolen princesses back from sleeping barrow kings. I burned down the town of Trebon.
@@ -24,6 +25,7 @@ wind = Book.create({
 
 owen = Book.create({
   title: "A Prayer for Owen Meany", author: "John Irving", publication_date: "1989-03-01",
+  image: "http://marketwizardz.com/wp-content/uploads/2014/01/Owen-Meany.jpg",
   summary: "'I am doomed to remember a boy with a wrecked voice—not because of his voice,
   or because he was the smallest person I ever knew, or even because he was the instrument of my mother's death,
   but because he is the reason I believe in God; I am a Christian because of Owen Meany.'
@@ -36,6 +38,7 @@ owen = Book.create({
 
 science = Book.create({
   title: "Bad Science", author: "Ben Goldacre", publication_date: "2008-09-01",
+  image: "http://ecx.images-amazon.com/images/I/71fmQ4lt-lL.jpg",
   summary: "Ben Goldacre’s wise and witty bestseller, shortlisted for the Samuel Johnson Prize,
   lifts the lid on quack doctors, flaky statistics, scaremongering journalists and evil pharmaceutical corporations.
 
