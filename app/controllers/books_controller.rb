@@ -1,21 +1,17 @@
 class BooksController < ApplicationController
   def index
-    render json: {
-      books: Book.order(:title)
-    }
+    books = Book.order(:title)
+
+      render json: {
+        books: books.as_json({:include => :reviews, :methods => :average_rating})
+      }
   end
 
   def show
-    book = Book.find(params[:id])
-
-    if (book.reviews.average(:rating) === nil)
-      average_rating = 0
-    else
-      average_rating = book.reviews.average(:rating).round
-    end
-
+    @book = Book.find(params[:id])
+    average_rating = @book.average_rating
     render json: {
-      book: book,
+      book: @book,
       average_rating: average_rating
     }
   end

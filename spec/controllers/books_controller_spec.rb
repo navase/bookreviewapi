@@ -21,6 +21,11 @@ RSpec.describe BooksController, type: :controller do
       get :show, id: book.id
       expect(response).to be_success
     end
+
+    it "returns json" do
+      get :show, id: book.id
+      expect(response.header['Content-Type']).to include('application/json')
+    end
   end
 
   describe "POST #create" do
